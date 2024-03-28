@@ -602,6 +602,28 @@ enhancing brand visibility and engagement.
     <div class="theme-btn">
         <i class="fas fa-adjust"></i>
     </div>
-    <script src="app.js"></script>
+    <script src="app.js">
+        <h1>SNS Notification Testing</h1>
+    <p id="notificationMessage"></p>
+
+    <script>
+        // Function to handle incoming notifications
+        function handleNotification(notification) {
+            // Extract relevant information from the notification payload
+            var message = notification.Message;
+
+            // Display the notification message on the webpage
+            var notificationElement = document.getElementById('notificationMessage');
+            notificationElement.textContent = message;
+        }
+
+        // Simulate receiving a notification (for testing purposes)
+        var sampleNotification = {
+            Message: 'You have a new notification!'
+        };
+        handleNotification(sampleNotification);
+    </script>
+    </script>
+    
 </body>
 </html>
